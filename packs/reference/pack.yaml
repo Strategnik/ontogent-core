@@ -1,0 +1,12 @@
+# Reference pack — a tiny, OPEN example so the engine runs out of the box.
+# Deliberately generic and domain-trivial: it demonstrates the format, not real expertise.
+# Real domain packs (GTM, governance) are premium content authored separately.
+id: ontogent/reference
+version: 0.1.0
+domain: Reference (example)
+description: "Minimal example pack demonstrating the format. Not domain content."
+authority: { authority: canonical, source: "example", author: ontogent, confidence: 0.5 }
+license: open
+archetypes: [arch-formal]
+effective_from: 2026-06-03
+min_pcg: [Doc, Claim]

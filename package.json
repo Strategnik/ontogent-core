@@ -1,0 +1,29 @@
+{
+  "name": "@ontogent/context-core",
+  "version": "0.1.0",
+  "description": "Open infrastructure for the Ontogent context layer: pack format, loader, validator, condition evaluator, and the Shield→Rank resolver. Domain knowledge lives in packs, never in here.",
+  "license": "MIT",
+  "type": "module",
+  "module": "src/index.ts",
+  "bin": {
+    "ontogent": "src/cli.ts",
+    "ontogent-mcp": "src/mcp.ts"
+  },
+  "scripts": {
+    "validate": "bun run src/cli.ts validate",
+    "resolve": "bun run src/cli.ts resolve",
+    "selftest": "bun run src/cli.ts selftest",
+    "mcp": "bun run src/mcp.ts",
+    "typecheck": "tsc --noEmit"
+  },
+  "dependencies": {
+    "@anthropic-ai/sdk": "^0.100.1",
+    "@modelcontextprotocol/sdk": "^1.29.0",
+    "yaml": "^2.4.5",
+    "zod": "4.4.3"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0",
+    "@types/bun": "latest"
+  }
+}

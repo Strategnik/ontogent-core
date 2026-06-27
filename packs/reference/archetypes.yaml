@@ -1,0 +1,9 @@
+---
+id: arch-formal
+kind: archetype
+statement: "Formal document mode — stricter clarity/citation expectations."
+selects: { tags: [formal] }
+signals: ['pcg.attr("register") == "formal"']
+provenance: { authority: canonical, source: "example", author: ontogent, confidence: 0.5 }
+axes: { topic: [mode] }
+tags: [formal]

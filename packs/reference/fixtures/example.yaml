@@ -1,0 +1,7 @@
+attrs:
+  register: formal
+nodes:
+  - id: claim-1
+    type: Claim
+    props: { text: "Adoption grew 40% last quarter" }
+    edges: []   # no cited_from → fires rule-claims-need-source

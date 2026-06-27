@@ -1,0 +1,21 @@
+---
+id: rule-claims-need-source
+kind: rule
+statement: "Every factual claim should cite a source."
+severity: soft
+directive: should
+rationale: "Unsourced claims can't be verified; a generic, domain-agnostic example bumper."
+axes: { task_type: [writing, review], topic: [claims] }
+applies_when: 'pcg.nodes("Claim").exists(c, !c.has_edge("cited_from"))'
+provenance: { authority: canonical, source: "example", author: ontogent, confidence: 0.5 }
+tags: [claims, formal]
+---
+id: rule-define-before-use
+kind: rule
+statement: "Define an acronym before using it."
+severity: info
+directive: consider
+rationale: "Readability example bumper; info-level, never shielded."
+axes: { task_type: [writing], topic: [clarity] }
+provenance: { authority: canonical, source: "example", author: ontogent, confidence: 0.5 }
+tags: [clarity, formal]
