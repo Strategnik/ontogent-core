@@ -1,5 +1,10 @@
 # Ontogent Context Core
 
+[![CI](https://github.com/Strategnik/ontogent-core/actions/workflows/ci.yml/badge.svg)](https://github.com/Strategnik/ontogent-core/actions/workflows/ci.yml)
+[![License: MIT](https://img.shields.io/badge/license-MIT-blue.svg)](LICENSE)
+[![Runtime: Bun](https://img.shields.io/badge/runtime-Bun-black.svg)](https://bun.sh)
+[![MCP](https://img.shields.io/badge/MCP-ready-1de2c4.svg)](#mcp-server-the-install-surface)
+
 **Open infrastructure for giving an AI agent domain-correct context.** This repo is the *engine*. It has **zero domain knowledge** — every rule, benchmark, and relationship lives in a **pack**. Delete the packs and the engine still runs; it just has nothing to apply. That separation is the whole point.
 
 > Bumper bowling for agents: the engine doesn't write or decide the output — it removes the gutters. The packs are the bumpers.
@@ -41,6 +46,13 @@ bun run validate /path/to/ontogent-gtm
 bun run resolve  /path/to/ontogent-gtm --pcg /path/to/fixtures/demo-quanta.yaml \
   --task "write a hero headline and recommend the first paid channel"
 ```
+
+## Developer proof
+
+- [Architecture notes](docs/architecture.md) document the open-core boundary and Shield -> Rank design.
+- [Build your first pack](docs/build-your-first-pack.md) walks through authoring a minimal pack.
+- [Sample resolver output](examples/resolve-output.txt) is committed so you can inspect the output shape before running anything.
+- CI validates the reference pack, runs the resolver, tests, and typechecks.
 
 ## Two-stage resolution (Shield → Rank)
 1. **Shield (Stage 1)** — active `hard`/`locked` constraints. Deterministic logic (deny-overrides); a relevance score can never out-compete them. This is the gutter guard.

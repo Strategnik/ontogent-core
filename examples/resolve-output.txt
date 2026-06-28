@@ -1,0 +1,13 @@
+$ bun run resolve packs/reference --pcg packs/reference/fixtures/example.yaml --task "review this document"
+
+# ontogent/reference@0.1.0  ·  task: review this document
+# active archetype(s): arch-formal
+
+## Stage 1 — Shield (hard/locked; ranking cannot override)
+  (none active)
+
+## Stage 2 — Rank (soft/info, by relevance)
+  • Every factual claim should cite a source.
+       rule-claims-need-source · soft/canonical · score 1.45
+  • Define an acronym before using it.
+       rule-define-before-use · info/canonical · score 0.38
