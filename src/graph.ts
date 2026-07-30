@@ -1,6 +1,6 @@
 import type { ProjectContextGraph } from "./types";
 
-type Neighbor = {
+export type Neighbor = {
   id: string;
   edge: string;
   direction: "outgoing" | "incoming";
