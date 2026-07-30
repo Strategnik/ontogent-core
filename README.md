@@ -102,3 +102,12 @@ v0.1 (feature-complete open core). Loader · validator · constrained-CEL evalua
 
 ## License
 MIT (this repo). Packs are licensed individually.
+
+## Expanded Open-Core Surface
+
+The plumbing remains open; the brain is the content. The public engine now also includes:
+
+- **Graph traversal:** directed-neighbor lookup, undirected breadth-first distances, shortest paths, and array chunking over a `ProjectContextGraph`.
+- **Embedding-agnostic retrieval:** bring your own vectors from any provider, then combine vector similarity with axis, authority, and recency signals plus optional MMR diversification.
+- **Authority ladder:** a generic, replaceable ordering with normalized strength and recency-aware comparison.
+- **Artifact provenance:** open source-kind records with small helpers for construction, completeness checks, and human-readable descriptions.
